@@ -174,7 +174,7 @@ function TourTooltip({ step, stepIndex, totalSteps, targetRect, lang, actionRunn
   }
 
   return (
-    <div style={tooltipStyle}>
+    <div data-tour-tooltip style={tooltipStyle}>
       <div style={{
         display: 'inline-flex', alignItems: 'center', gap: 6, padding: '3px 10px',
         borderRadius: 12, background: 'rgba(167,139,250,0.15)', color: '#c4b5fd',
@@ -262,8 +262,12 @@ function CompletionModal({ lang, onRestart, onExplore }) {
     <div style={{
       position: 'fixed', inset: 0, zIndex: 10000, display: 'flex', alignItems: 'center', justifyContent: 'center',
       background: 'rgba(0,0,0,0.8)', animation: 'tourFadeIn 0.4s ease-out',
+      cursor: 'pointer',
+    }} onClick={(e) => {
+      if (e.target.closest('[data-tour-completion]') || e.target.closest('button')) return;
+      onExplore();
     }}>
-      <div style={{
+      <div data-tour-completion style={{
         background: '#1A1B2E', border: '1px solid rgba(167,139,250,0.4)',
         borderRadius: 20, padding: '36px 40px', maxWidth: 460, width: '90%',
         textAlign: 'center', animation: 'tourScaleIn 0.4s ease-out',
@@ -456,8 +460,11 @@ function OnboardingTour({ lang, setLang, onComplete }) {
       ) : (
         <div style={{ position: 'fixed', inset: 0, zIndex: 9998, background: 'rgba(0,0,0,0.75)', pointerEvents: 'none' }} />
       )}
-      <div style={{ position: 'fixed', inset: 0, zIndex: 9998, pointerEvents: actionRunning ? 'none' : 'auto', background: 'transparent' }}
-        onClick={e => e.stopPropagation()}>
+      <div style={{ position: 'fixed', inset: 0, zIndex: 9998, pointerEvents: actionRunning ? 'none' : 'auto', background: 'transparent', cursor: 'pointer' }}
+        onClick={(e) => {
+          if (e.target.closest('[data-tour-tooltip]') || e.target.closest('button')) return;
+          handleNext();
+        }}>
         <TourTooltip
           step={currentStep} stepIndex={stepIndex} totalSteps={TOUR_STEPS.length}
           targetRect={targetRect} lang={lang} actionRunning={actionRunning}
