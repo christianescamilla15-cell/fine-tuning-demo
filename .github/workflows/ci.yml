@@ -1,0 +1,42 @@
+name: CI — Fine-Tuning Demo
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Prepare data splits
+        run: python -m src.prepare_data
+
+      - name: Run tests
+        run: pytest tests/ -v --tb=short
+
+      - name: Verify data preparation
+        run: |
+          python -c "
+          import json
+          with open('data/train.json') as f:
+              train = json.load(f)
+          with open('data/test.json') as f:
+              test = json.load(f)
+          assert len(train) == 80, f'Expected 80 train samples, got {len(train)}'
+          assert len(test) == 20, f'Expected 20 test samples, got {len(test)}'
+          print(f'Data OK: {len(train)} train, {len(test)} test')
+          "

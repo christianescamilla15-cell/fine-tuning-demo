@@ -1,0 +1,101 @@
+text,intent
+quiero comprar un producto,sales
+necesito hablar con ventas,sales
+cual es el precio,sales
+me interesa el servicio,sales
+quiero adquirir un plan,sales
+tienen descuentos disponibles,sales
+me pueden cotizar,sales
+quiero hacer una compra,sales
+que planes de pago tienen,sales
+me interesa contratar el servicio,sales
+hay promociones vigentes,sales
+quiero informacion de precios,sales
+como puedo comprar,sales
+tienen algun paquete especial,sales
+necesito una cotizacion urgente,sales
+quiero ver el catalogo de productos,sales
+cuanto cuesta el plan premium,sales
+ofrecen prueba gratuita,sales
+quiero hablar con un asesor de ventas,sales
+tienen financiamiento disponible,sales
+tengo un problema con mi pedido,support
+no funciona mi cuenta,support
+necesito ayuda tecnica,support
+mi producto llego danado,support
+no puedo iniciar sesion,support
+el sistema me da error,support
+mi pedido no ha llegado,support
+necesito soporte con la aplicacion,support
+se trabo la pagina web,support
+no me llega el correo de confirmacion,support
+tengo un error al pagar,support
+la app se cierra sola,support
+mi contrasena no funciona,support
+no puedo acceder a mi cuenta,support
+el producto no enciende,support
+tengo problemas con la conexion,support
+como reseteo mi contrasena,support
+el servicio esta caido,support
+necesito reportar una falla,support
+mi pedido llego incompleto,support
+quiero ver mi factura,billing
+necesito un recibo,billing
+cuando me cobran,billing
+quiero cancelar mi suscripcion,billing
+me cobraron de mas,billing
+necesito un comprobante de pago,billing
+quiero cambiar mi metodo de pago,billing
+cuando es mi proximo cobro,billing
+no reconozco un cargo en mi cuenta,billing
+quiero un reembolso,billing
+me pueden enviar mi estado de cuenta,billing
+como descargo mi factura,billing
+necesito factura con datos fiscales,billing
+quiero actualizar mis datos de facturacion,billing
+me cobraron dos veces,billing
+cuando vence mi suscripcion,billing
+quiero cambiar de plan de pago,billing
+necesito cancelar un cargo,billing
+como pago mi mensualidad,billing
+quiero ver mi historial de pagos,billing
+necesito hablar con un gerente,escalation
+quiero poner una queja,escalation
+esto es urgente,escalation
+no me resolvieron mi problema,escalation
+quiero hablar con un supervisor,escalation
+voy a cancelar todo si no me ayudan,escalation
+llevo mucho tiempo esperando,escalation
+es la tercera vez que llamo,escalation
+quiero hacer una reclamacion formal,escalation
+necesito una solucion inmediata,escalation
+su servicio es pesimo,escalation
+quiero reportar a un empleado,escalation
+exijo hablar con alguien de mayor rango,escalation
+voy a dejar una resena negativa,escalation
+esto es inaceptable,escalation
+necesito que resuelvan esto hoy,escalation
+ya no quiero tratar con ustedes,escalation
+me siento ignorado como cliente,escalation
+quiero escalar mi caso,escalation
+denunciare ante la autoridad competente,escalation
+hola buenos dias,general
+que servicios ofrecen,general
+donde estan ubicados,general
+cual es su horario,general
+hola como estan,general
+buenas tardes,general
+que hacen ustedes,general
+como los puedo contactar,general
+tienen redes sociales,general
+cual es su pagina web,general
+en que paises operan,general
+tienen sucursales,general
+como puedo registrarme,general
+que tipo de empresa son,general
+desde cuando existen,general
+tienen atencion en fin de semana,general
+cual es su correo electronico,general
+aceptan clientes internacionales,general
+tienen app movil,general
+como funciona su plataforma,general

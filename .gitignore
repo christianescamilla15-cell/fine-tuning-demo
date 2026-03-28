@@ -1,0 +1,12 @@
+models/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/train.json
+data/test.json
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
